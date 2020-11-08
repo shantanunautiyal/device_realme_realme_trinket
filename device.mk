@@ -120,7 +120,6 @@ PRODUCT_COPY_FILES += \
 #  Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.realme_trinket
-    
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
@@ -128,7 +127,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles_vendor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles_vendor.xml
+    $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
 
 # Net
 PRODUCT_PACKAGES += \
