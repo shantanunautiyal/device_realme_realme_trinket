@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/octavi_raphael.mk
+    $(LOCAL_DIR)/lineage_realme_trinket.mk
 	
 COMMON_LUNCH_CHOICES := \
-    octavi_raphael-user \
-    octavi_raphael-userdebug \
-    octavi_raphael-eng
+    lineage_realme_trinket-user \
+    lineage_realme_trinket-userdebug \
+    lineage_realme_trinket-eng
 

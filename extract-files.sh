@@ -7,16 +7,16 @@
 
 set -e
 
-DEVICE=raphael
-VENDOR=xiaomi
+DEVICE=realme_trinket
+VENDOR=realme
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-OCTAVI_ROOT="${MY_DIR}"/../../..
+LINEAGE_ROOT="${MY_DIR}"/../../..
 
-HELPER="${OCTAVI_ROOT}/vendor/octavi/build/tools/extract_utils.sh"
+HELPER="${LINEAGE_ROOT}/vendor/lineage/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -50,7 +50,7 @@ if [ -z "${SRC}" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${OCTAVI_ROOT}" true "${CLEAN_VENDOR}"
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"

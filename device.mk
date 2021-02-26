@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/raphael/raphael-vendor.mk)
+$(call inherit-product-if-exists, vendor/realme/realme_trinket/realme_trinket-vendor.mk)
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
@@ -24,13 +24,12 @@ PRODUCT_PACKAGES += \
     com.android.vndk.current.on_vendor
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-octavi
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -39,7 +38,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -62,7 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # Board
 PRODUCT_USES_QCOM_HARDWARE := true
-PRODUCT_BOARD_PLATFORM := msmnile
+PRODUCT_BOARD_PLATFORM := trinket
 
 
 # Device-specific settings
@@ -76,8 +75,12 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libvulkan
 
+# Fingerprint
 PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
+    android.hardware.biometrics.fingerprint@2.1-service.realme_trinket
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 # FM
 PRODUCT_PACKAGES += \
@@ -113,11 +116,12 @@ PRODUCT_COPY_FILES += \
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayout/sm8150-tavil-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/sm8150-tavil-snd-card_Button_Jack.kl
 
-# Light
+
+#  Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-impl.raphael
+    android.hardware.light@2.0-service.realme_trinket
+    
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \

@@ -6,12 +6,12 @@
 
 # Inherit some common device stuff.
 
-$(call inherit-product, device/xiaomi/raphael/device.mk)
+$(call inherit-product, device/realme/realme_trinket/device.mk)
 
 
 # Inherit some common octavi stuff.
 
-$(call inherit-product,vendor/octavi/config/common.mk)
+$(call inherit-product,vendor/lineage/config/common_full_phone.mk)
 
 # Setup Gapps options
 IS_PHONE := true
@@ -22,13 +22,12 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := raphael
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := octavi_raphael
+PRODUCT_BRAND := Realme
+PRODUCT_DEVICE := realme_trinket
+PRODUCT_MANUFACTURER := Realme
+PRODUCT_NAME := lineage_realme_trinket
 
-BUILD_FINGERPRINT := "Xiaomi/raphaelin/raphaelin:9/PKQ1.181121.001/V10.3.3.0.PFKINXM:user/release-keys"
+BUILD_FINGERPRINT := "trinket-user-10-QKQ1.200209.002--release-keys"
 
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_GMS_CLIENTID_BASE := android-realme
 
-OCTAVI_DEVICE_MAINTAINER := IrongFly
