@@ -193,11 +193,6 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget \
     GestureLineOverlay \
     MccMncOverlay \
-    MiuiBiometricResOverlay \
-    MiuiBluetoothOverlay \
-    MiuiFrameworkResOverlay \
-    MiuiSettingsResOverlay \
-    MiuiSystemUIResOverlay \
     OptInAppOverlay \
     SystemUIResCommon \
     TelecommResCommon \
