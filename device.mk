@@ -106,7 +106,6 @@ PRODUCT_BOOT_JARS += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
     init.qcom.rc \
     init.recovery.qcom.rc
 
