@@ -23,10 +23,9 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
-#include "property_service.h"
 #include "vendor_init.h"
 
-using android::init::property_set;
+using android::base::SetProperty;
 
 void property_override(char const prop[], char const value[])
 {
@@ -56,11 +55,11 @@ void load_RMX1927(){
     property_override("ro.product.model", "Realme 5 NFC");
     property_override("ro.build.product", "RMX1927");
     property_override("ro.product.device", "RMX1927");
-    property_set("persist.sys.nfc.disPowerSave", "1");
-    property_set("persist.sys.nfc.default", "on");
-    property_set("persist.sys.nfc.aid_overflow", "true");
-    property_set("ro.product.cuptsm", "OPPO|ESE|01|02");
-    property_set("persist.sys.nfc.antenna_area", "bottom");
+    SetProperty("persist.sys.nfc.disPowerSave", "1");
+    SetProperty("persist.sys.nfc.default", "on");
+    SetProperty("persist.sys.nfc.aid_overflow", "true");
+    SetProperty("ro.product.cuptsm", "OPPO|ESE|01|02");
+    SetProperty("persist.sys.nfc.antenna_area", "bottom");
 }
 
 void load_RMX2030() {
