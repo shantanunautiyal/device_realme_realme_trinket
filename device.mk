@@ -180,23 +180,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# Vendor Overlays
-PRODUCT_PACKAGES += \
-    AospFrameworkResOverlay \
-    AospWifiResOverlay \
-    CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    DocumentsUIOverlay \
-    ElderlyNavigationBarOverlay \
-    FrameworksResCommon \
-    FrameworksResTarget \
-    GestureLineOverlay \
-    MccMncOverlay \
-    OptInAppOverlay \
-    SystemUIResCommon \
-    TelecommResCommon \
-    TelephonyResCommon
-
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
