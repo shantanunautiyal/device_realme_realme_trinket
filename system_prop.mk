@@ -8,7 +8,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gyro.disable=0 \
     persist.vendor.camera.cam.list=256111120 \
-    vendor.camera.aux.packagelist=android,com.google.engineermode.camera,com.google.camera,com.google.engineermode,com.google.android.GoogleCameraEng,com.google.android.GoogleCamera,org.codeaurora.snapcam,com.oneplus.camera
+    vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap,com.google.engineermode.camera,com.google.camera,com.google.engineermode,com.google.android.GoogleCameraEng,com.google.android.GoogleCamera,org.codeaurora.snapcam,com.oneplus.camera
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
